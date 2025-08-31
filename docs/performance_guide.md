@@ -1118,25 +1118,3 @@ def balanced_optimization(model, target_memory_gb: float = 8.0):
         
     return model, optimal_batch
 ```
-
----
-
-## 🚀 Performance Validation
-
-### Validation Checklist
-
-After applying optimizations, validate your setup:
-
-```python
-def validate_optimization(model, test_data):
-    """Validate that optimizations are working correctly"""
-    
-    checks = {}
-    
-    # 1. Check device placement
-    model_device = next(model.parameters()).device
-    checks['correct_device'] = model_device.type == 'mps'
-    
-    # 2. Check mixed precision
-    model_dtype = next(model.parameters()).dtype
-    checks['mixed_precision'] = model_dtype == torch.float16

@@ -46,7 +46,7 @@ mac-gpu-toolkit/
 │   ├── install_dependencies.py # Clean installation
 │   ├── verify_gpu.py          # Test GPU acceleration
 │   ├── benchmark_performance.py # Performance comparison
-│   └── troubleshoot.py        # Common issue solutions
+│   
 ├── src/
 │   ├── __init__.py
 │   ├── gpu_utils.py           # Production utilities
@@ -102,7 +102,3 @@ Based on real-world testing:
 
 - Check the [troubleshooting guide](docs/troubleshooting.md)
 - Open an issue for bugs or feature requests
-
-## ⭐ Star History
-
-If this toolkit helped you, please consider giving it a star!
