@@ -2,16 +2,6 @@
 
 *Complete solutions for common issues when setting up and using GPU acceleration on Apple Silicon Macs*
 
-## 🚨 Quick Diagnostics
-
-Before diving into specific issues, run our automated diagnostic script:
-
-```bash
-python scripts/troubleshoot.py
-```
-
-This will identify the most common problems automatically. If issues persist, use this guide for detailed solutions.
-
 ---
 
 ## 📋 Common Installation Issues
@@ -89,18 +79,18 @@ except RuntimeError as e:
 ```
 
 **B) Use Alternative Operations**
-```python
-# Common problematic operations and alternatives:
 
-# Instead of: torch.linalg.svd (not supported)
-# Use: torch.svd (supported)
+Common problematic operations and alternatives:
 
-# Instead of: torch.fft.fft (limited support)
-# Use: CPU fallback for FFT operations
+Instead of: torch.linalg.svd (not supported)
+Use: torch.svd (supported)
 
-# Instead of: certain indexing operations
-# Use: torch.gather or torch.index_select
-```
+Instead of: torch.fft.fft (limited support)
+Use: CPU fallback for FFT operations
+
+Instead of: certain indexing operations
+Use: torch.gather or torch.index_select
+
 
 **C) Mixed Precision Issues**
 ```python
@@ -154,10 +144,8 @@ export TF_CPP_MIN_LOG_LEVEL=1
 ### Issue 4: Memory Errors
 
 **Symptoms:**
-```
+
 RuntimeError: MPS backend out of memory
-torch.cuda.OutOfMemoryError: CUDA out of memory
-```
 
 **Solutions:**
 
@@ -170,8 +158,6 @@ gc.collect()
 if torch.backends.mps.is_available():
     torch.mps.empty_cache()
     
-if torch.cuda.is_available():
-    torch.cuda.empty_cache()
 ```
 
 **B) Reduce Batch Size**
@@ -731,21 +717,6 @@ if __name__ == "__main__":
 
 ---
 
-## 📞 Getting Help
-
-### When to Contact Support
-
-If you've tried all solutions above and still have issues:
-
-1. **Run the debug script** and save the output
-2. **Create a minimal reproduction case**
-3. **Check our [GitHub Issues](https://github.com/yourusername/mac-gpu-toolkit/issues)**
-4. **Open a new issue** with:
-   - Debug script output
-   - Minimal reproduction code
-   - Expected vs actual behavior
-   - Hardware specifications
-
 ### Community Resources
 
 - **PyTorch MPS Issues**: [PyTorch GitHub Issues](https://github.com/pytorch/pytorch/issues)
@@ -781,8 +752,3 @@ This will confirm that:
 - ✅ Memory management is optimal  
 - ✅ Performance is as expected
 - ✅ No errors in basic operations
-
----
-
-*Last updated: August 2025*
-*For the latest troubleshooting tips, check our [GitHub repository](https://github.com/yourusername/mac-gpu-toolkit)*
