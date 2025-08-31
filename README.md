@@ -57,14 +57,10 @@ mac-gpu-toolkit/
 │   ├── tensorflow_example.py  # TensorFlow Metal example
 │   ├── mlx_example.py         # MLX native example
 │   └── marker_processing.py   # Document processing example
-├── tests/
-│   ├── test_gpu_utils.py      # Unit tests
-│   ├── test_device_manager.py
-│   └── test_optimization.py
 └── docs/
     ├── troubleshooting.md     # Detailed troubleshooting
     ├── performance_guide.md   # Optimization guide
-    └── migration_guide.md     # CUDA to MPS migration
+
 ```
 
 ## 🛠 Components
@@ -101,18 +97,10 @@ Based on real-world testing:
 | LLM Inference (7B params) | 45s | 8s | 5.6x |
 | Document Processing (Marker) | 45s/page | 7s/page | 6.4x |
 
-## 🤝 Contributing
-
-Contributions are welcome! Please read our contributing guidelines and submit pull requests for any improvements.
-
-## 📝 License
-
-MIT License - see LICENSE file for details.
 
 ## 🆘 Support
 
 - Check the [troubleshooting guide](docs/troubleshooting.md)
-- Run `python scripts/troubleshoot.py` for automated diagnostics
 - Open an issue for bugs or feature requests
 
 ## ⭐ Star History
