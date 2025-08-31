@@ -1,0 +1,97 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+.eggs/
+.Python
+*.so
+
+# Byte-compiled / optimized / DLL files
+*.dll
+*.dylib
+*.o
+*.a
+
+# === Virtual Environments ===
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# === Build & Distribution ===
+build/
+dist/
+*.manifest
+*.spec
+pip-wheel-metadata/
+*.whl
+
+# === Jupyter / Notebooks (if added later) ===
+.ipynb_checkpoints/
+*.ipynb
+
+# === Logs & Debug ===
+*.log
+*.out
+*.err
+*.DS_Store
+*.swp
+*.swo
+
+# === IDE / Editor ===
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# === Coverage / Testing ===
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+htmlcov/
+.tox/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.dmypy.json
+.pytype/
+
+# === Docs build artifacts ===
+docs/_build/
+docs/_autosummary/
+site/
+
+# === Marker or other large test files ===
+examples/output/
+data/
+*.pdf
+*.mdx
+
+# === Docker ===
+*.pid
+*.tar
+*.log
+
+# === macOS system files ===
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# === Backup files ===
+*~
+*.bak
+*.tmp
+*.orig
+*.rej
