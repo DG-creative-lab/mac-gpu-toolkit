@@ -1,6 +1,3 @@
-"""
-MLX example - Apple's native ML framework optimized for Apple Silicon
-"""
 import time
 import numpy as np
 from pathlib import Path
